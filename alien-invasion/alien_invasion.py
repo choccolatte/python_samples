@@ -14,7 +14,7 @@ def run_game():
     pg.display.set_caption('Alien Invasion')
 
     #make a ship using degined ship
-    ship = Ship(screen)
+    ship = Ship(ai_settings, screen)
 
     #setting background color
     bg_color= (94, 104, 109)
@@ -24,6 +24,9 @@ def run_game():
         # Watch for keyboard and mouse events
 
         gf.check_events(ship)
+
+        #call update function on each pass through
+        ship.update()
         
         #redraw the screen during each pass through the loop
         gf.update_screen(ai_settings, screen, ship)      
