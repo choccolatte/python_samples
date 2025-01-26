@@ -1,7 +1,9 @@
 class Board:
     def __init__(self, board):
         self.board = board
-
+    def find_empty_cell(self):
+        for row, contents in enumerate(self.board):
+          pass
 puzzle = [
   [0, 0, 2, 0, 0, 8, 0, 0, 0],
   [0, 0, 0, 0, 0, 3, 7, 6, 2],
@@ -15,4 +17,3 @@ puzzle = [
 ]
 
 gameboard = Board(puzzle)
-print(gameboard.board)
